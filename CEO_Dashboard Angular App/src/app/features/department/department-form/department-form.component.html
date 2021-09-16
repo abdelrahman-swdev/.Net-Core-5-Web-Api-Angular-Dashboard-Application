@@ -1,0 +1,41 @@
+<h2 *ngIf="department" class="ms-4 mt-1 text-info">Edit Dpartment</h2>
+<h2 *ngIf="!department" class="ms-4 mt-1 text-info">New Dpartment</h2>
+<form
+  #departmentForm="ngForm"
+  (ngSubmit)="saveDep(departmentForm.value)"
+  class="ms-4"
+>
+  <input type="hidden" [ngModel]="department?.depId" name="id"/>
+  <div class="">
+    <label for="depName" class="form-label">Department Name</label>
+    <input
+      required
+      [ngModel]="department?.name"
+      type="text"
+      class="form-control"
+      name="departmentName"
+      id="depName"
+    />
+    <div
+      *ngIf="
+        departmentForm.controls.departmentName?.invalid &&
+        departmentForm.controls.departmentName?.touched
+      "
+      class="form-text text-danger"
+    >
+      Department Name Is Required
+    </div>
+  </div>
+  <div class="d-grid gap-2">
+    <button
+      [disabled]="departmentForm.invalid"
+      type="submit"
+      class="btn btn-success mt-2"
+    >
+      Save
+    </button>
+    <a routerLink="/dashboard/departments" class="btn btn-secondary mt-2"
+    >Back To List</a
+  >
+  </div>
+</form>

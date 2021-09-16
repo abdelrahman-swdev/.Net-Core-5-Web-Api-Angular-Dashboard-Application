@@ -1,0 +1,60 @@
+<div class="ms-2 mt-2">
+  <h2>
+    Department:
+    <span class="text-primary">{{ departmentWithEmployees.name }}</span>
+  </h2>
+  <div
+    class="alert alert-secondary"
+    role="alert"
+    *ngIf="departmentWithEmployees.employees.length == 0"
+  >
+    No employees assigned to this department yet.
+  </div>
+  <div
+    class="table-responsive"
+    *ngIf="departmentWithEmployees.employees.length > 0"
+  >
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#Id</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Salary</th>
+          <th>Country</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of departmentWithEmployees.employees">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.fullName }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.age }}</td>
+          <td>{{ emp.phoneNumber }}</td>
+          <td>{{ emp.salary }}</td>
+          <td>{{ emp.address.country }}</td>
+          <td>{{ emp.address.city }}</td>
+          <td>{{ emp.address.street }}</td>
+          <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <a
+                routerLink="/dashboard/employees/{{ emp.id }}/edit"
+                class="btn btn-outline-secondary me-1 custom-link"
+                ><i class="fas fa-edit"></i
+              ></a>
+              <button class="btn btn-outline-danger me-1" (click)="delete(emp.id)"><i class="fas fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a routerLink="/dashboard/departments" class="btn btn-secondary mt-2"
+    >Back To List</a
+  >
+</div>

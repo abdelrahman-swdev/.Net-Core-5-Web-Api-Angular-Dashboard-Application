@@ -1,0 +1,53 @@
+<a routerLink="new" class="btn btn-primary m-2">
+  New Employee
+</a>
+<div *ngIf="noEmployees" class="alert alert-secondary m-2">No Employees To Show</div>
+<div *ngIf="!noEmployees" class="table-responsive  ms-2 mt-2">
+  <table class="table table-hover m-0">
+    <thead>
+      <tr>
+        <th>#Id</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Salary</th>
+        <th>Departmnet</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.fullName }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.age }}</td>
+        <td>{{ emp.phoneNumber }}</td>
+        <td>{{ emp.salary }}</td>
+        <td *ngIf="emp.departmentId">{{getDepartmentWithId(emp.departmentId)?.name}}</td>
+        <td *ngIf="!emp.departmentId">none</td>
+        <td>{{ emp.address.country }}</td>
+        <td>{{ emp.address.city }}</td>
+        <td>{{ emp.address.street }}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="actions">
+            <a
+              routerLink="/dashboard/employees/{{ emp.id }}/edit"
+              class="btn btn-outline-secondary me-1 custom-link"
+              ><i class="fas fa-edit"></i
+            ></a>
+            <button
+              (click)="delete(emp.id)"
+              class="btn btn-outline-danger me-1"
+              ><i class="fas fa-trash"></i
+            ></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="badge bg-dark mb-2 mt-1">{{employees.length}} of {{count}}</span>
+</div>

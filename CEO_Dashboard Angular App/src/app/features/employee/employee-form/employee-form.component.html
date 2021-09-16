@@ -1,0 +1,186 @@
+<h2 *ngIf="employee" class="ms-4 mt-1 text-info">Edit Employee</h2>
+<h2 *ngIf="!employee" class="ms-4 mt-1 text-info">New Employee</h2>
+<form
+  [formGroup]="employeeForm"
+  class="ms-4"
+  (ngSubmit)="saveEmployee(employeeForm.value)"
+>
+  <input
+    type="hidden"
+    name="employeeId"
+    class="form-control"
+    formControlName="id"
+  />
+
+  <div class="form-group mb-2">
+    <label for="name" class="form-label">Full Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      class="form-control"
+      formControlName="fullName"
+    />
+    <div *ngIf="!validName()" class="form-text text-danger">
+      Name Field Is Required
+    </div>
+    <div
+      *ngIf="fullNameControl.errors?.maxlength"
+      class="form-text text-danger"
+    >
+      Max Length Exceeded
+    </div>
+  </div>
+
+  <div class="form-group mb-2">
+    <label for="age" class="form-label">Age</label>
+    <input
+      type="text"
+      name="age"
+      id="age"
+      class="form-control"
+      formControlName="age"
+    />
+    <div
+      *ngIf="ageControl.errors?.required && ageControl.touched"
+      class="form-text text-danger"
+    >
+      Age Field Is Required
+    </div>
+  </div>
+
+  <div class="form-group mb-2">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input
+      type="text"
+      name="phone"
+      id="phone"
+      class="form-control"
+      formControlName="phoneNumber"
+    />
+    <div
+      *ngIf="phoneControl.errors?.required && phoneControl.touched"
+      class="form-text text-danger"
+    >
+      Phone Number Field Is Required
+    </div>
+  </div>
+
+  <div class="form-group mb-2">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="text"
+      name="email"
+      id="email"
+      class="form-control"
+      formControlName="email"
+    />
+    <div
+      *ngIf="emailControl.errors?.required && emailControl.touched"
+      class="form-text text-danger"
+    >
+      Email Field Is Required
+    </div>
+    <div *ngIf="emailControl.errors?.email" class="form-text text-danger">
+      Invalid Email Syntax
+    </div>
+  </div>
+
+  <div class="form-group mb-2">
+    <label for="salary" class="form-label">Salary</label>
+    <input
+      type="text"
+      name="salary"
+      id="salary"
+      class="form-control"
+      formControlName="salary"
+    />
+    <div
+      *ngIf="salaryControl.errors?.required && salaryControl.touched"
+      class="form-text text-danger"
+    >
+      Salary Field Is Required
+    </div>
+  </div>
+
+  <div class="row address" formGroupName="address">
+    <input
+      type="hidden"
+      name="addressId"
+      class="form-control"
+      formControlName="addressId"
+    />
+    <div class="form-group mb-2">
+      <label for="country" class="form-label">Country</label>
+      <input
+        type="text"
+        name="country"
+        id="country"
+        class="form-control"
+        formControlName="country"
+      />
+      <div
+        *ngIf="countryControl.errors?.required && countryControl.touched"
+        class="form-text text-danger"
+      >
+        Country Field Is Required
+      </div>
+    </div>
+    <div class="form-group col-6 mb-2">
+      <label for="city" class="form-label">City</label>
+      <input
+        type="text"
+        name="city"
+        id="city"
+        class="form-control"
+        formControlName="city"
+      />
+      <div
+        *ngIf="cityControl.errors?.required && cityControl.touched"
+        class="form-text text-danger"
+      >
+        City Field Is Required
+      </div>
+    </div>
+    <div class="form-group col-6 mb-2">
+      <label for="street" class="form-label">Street</label>
+      <input
+        type="text"
+        name="street"
+        id="street"
+        class="form-control"
+        formControlName="street"
+      />
+      <div
+        *ngIf="streetControl.errors?.required && streetControl.touched"
+        class="form-text text-danger"
+      >
+        Street Field Is Required
+      </div>
+    </div>
+  </div>
+  <div class="form-group mb-2">
+    <label class="form-label" for="departmentList">Select Department</label>
+    <select
+      class="form-select"
+      aria-label="select department"
+      id="departmentList"
+      formControlName="departmentId"
+    >
+      <option selected disabled></option>
+      <option *ngFor="let dep of departments" value="{{ dep.depId }}">
+        {{ dep.name }}
+      </option>
+    </select>
+  </div>
+  <button
+    [disabled]="employeeForm.invalid"
+    type="submit"
+    class="btn btn-success me-2"
+  >
+    Save
+  </button>
+  <a class="btn btn-secondary" routerLink="/dashboard/employees"
+    >Back To List</a
+  >
+</form>

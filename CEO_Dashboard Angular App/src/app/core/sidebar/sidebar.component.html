@@ -1,0 +1,28 @@
+<div class="sidebar">
+  <div class="user-info">
+      <p>
+        <a>{{ user?.userName }} <i class="fas fa-user ms-1 text-primary"></i></a>
+      </p>
+      <div class="roles-content">
+        Roles: 
+        <span
+          *ngFor="let role of user?.roles; let last = last"
+          class="badge bg-secondary ms-1"
+          >{{ role }}</span
+        >
+      </div>
+    </div>
+    <div class="logout">
+      <button (click)="logout()" class="btn btn-outline-secondary">Logout</button>
+  </div>
+  <div class="links">
+    <ul>
+      <li>
+        <a routerLink="/dashboard/employees">Employees <i class="fas fa-users ms-1"></i></a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/departments">Departments <i class="fas fa-list ms-1"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>

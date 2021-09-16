@@ -1,0 +1,19 @@
+<div class="login-container row">
+    <div class="form-container  col-10 col-lg-6">
+        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login(loginForm.value)">
+            <div class="alert alert-danger m-3" *ngIf="loggedInFailed">Email or password incorrect.</div>
+            <div class="form-group m-3 text-light">
+                <label for="email" class="form-label">Email</label>
+                <input formControlName="email" type="email" name="email" id="email" class="form-control">
+            </div>
+            <div class="form-group m-3 text-light">
+                <label for="password" class="form-label">Password</label>
+                <input formControlName="password" type="password" name="password" id="password" class="form-control">
+            </div>
+            <div class="m-3">
+                <div class="form-text text-danger">{{validateForm()}}</div>
+                <button [disabled]="loginForm.invalid" type="submit" class="btn btn-outline-success mt-2">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
