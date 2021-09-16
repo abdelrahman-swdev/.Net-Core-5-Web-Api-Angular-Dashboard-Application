@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Important_Projects\\Web\\CEO Dashboard\\CEO_Dashboard\\CEO_Dashboard.CORE\\CEO_Dashboard.CORE.csproj": {}
+  },
+  "projects": {
+    "D:\\Important_Projects\\Web\\CEO Dashboard\\CEO_Dashboard\\CEO_Dashboard.CORE\\CEO_Dashboard.CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Important_Projects\\Web\\CEO Dashboard\\CEO_Dashboard\\CEO_Dashboard.CORE\\CEO_Dashboard.CORE.csproj",
+        "projectName": "CEO_Dashboard.CORE",
+        "projectPath": "D:\\Important_Projects\\Web\\CEO Dashboard\\CEO_Dashboard\\CEO_Dashboard.CORE\\CEO_Dashboard.CORE.csproj",
+        "packagesPath": "C:\\Users\\bebog\\.nuget\\packages\\",
+        "outputPath": "D:\\Important_Projects\\Web\\CEO Dashboard\\CEO_Dashboard\\CEO_Dashboard.CORE\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\bebog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

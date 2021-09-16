@@ -1,0 +1,12 @@
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\bin\Debug\net5.0\CEO_Dashboard.CORE.deps.json
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\bin\Debug\net5.0\CEO_Dashboard.CORE.dll
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\bin\Debug\net5.0\ref\CEO_Dashboard.CORE.dll
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\bin\Debug\net5.0\CEO_Dashboard.CORE.pdb
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.GeneratedMSBuildEditorConfig.editorconfig
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.AssemblyInfoInputs.cache
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.AssemblyInfo.cs
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.csproj.CoreCompileInputs.cache
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.dll
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\ref\CEO_Dashboard.CORE.dll
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.pdb
+D:\Important_Projects\Web\CEO Dashboard\CEO_Dashboard\CEO_Dashboard.CORE\obj\Debug\net5.0\CEO_Dashboard.CORE.csproj.AssemblyReference.cache
